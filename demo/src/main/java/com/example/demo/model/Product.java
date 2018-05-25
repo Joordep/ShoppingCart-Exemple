@@ -35,7 +35,19 @@ public class Product {
 	}
 	public void setImage(String image) {
 		this.image = image;
+		
 	}
+
+
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+	
 //	public BigDecimal getPrice() {
 //		return price;
 //	}

@@ -70,12 +70,18 @@ public class ShoppingCartAPIController {
 		return "redirect:/shoppingcart";
 	}
 	
-	
-	
-
 	@DeleteMapping("/shoppingcart/items/{id}")
-	public void shoppingcartItemIdDelete(@PathVariable("id") String id) {
+	public String shoppingcartItemIdDelete(Model model, @PathVariable("id") String id) {
 
 		shoppingCartAPIService.shoppingcartItemsIdDelete(id);
+		
+		return "redirect:/shoppingcart";
 	}
+	
+
+//	@DeleteMapping("/shoppingcart/items/{id}")
+//	public void shoppingcartItemIdDelete(@PathVariable("id") String id) {
+//
+//		shoppingCartAPIService.shoppingcartItemsIdDelete(id);
+//	}
 }

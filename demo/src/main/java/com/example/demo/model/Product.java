@@ -1,22 +1,21 @@
 package com.example.demo.model;
 
+import java.math.BigDecimal;
+
 public class Product {
 		
 	String id;
 	String name;
 	String image;
-//	BigDecimal price;
-	double price;
-	
-	// mudar 
-	public Product(String id, String name, String image, double price) {
+	BigDecimal price = new BigDecimal ("0.0");
+
+	public Product(String id, String name, String image, BigDecimal price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.image = image;
 		this.price = price;
-	}
-	
+	}	
 	
 	public String getId() {
 		return id;
@@ -34,28 +33,13 @@ public class Product {
 		return image;
 	}
 	public void setImage(String image) {
-		this.image = image;
-		
+		this.image = image;		
 	}
 
-
-	public double getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
-	}
-	
-	
-	
-//	public BigDecimal getPrice() {
-//		return price;
-//	}
-//	public void setPrice(BigDecimal price) {
-//		this.price = price;
-//	}
-	
-	
-	
-	
+	}	
 }

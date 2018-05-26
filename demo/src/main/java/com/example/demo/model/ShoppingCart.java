@@ -1,18 +1,15 @@
 package com.example.demo.model;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class ShoppingCart {
 	
 	
 	ArrayList<CommerceItem> array;
-	//BigDecimal amount;
-	double amount;
-	
+	BigDecimal amount = new BigDecimal("0.0");
 
-
-
-	public ShoppingCart(ArrayList<CommerceItem> array, double amount) {
+	public ShoppingCart(ArrayList<CommerceItem> array, BigDecimal amount) {
 		super();
 		this.array = array;
 		this.amount = amount;
@@ -26,18 +23,12 @@ public class ShoppingCart {
 		this.array = array;
 	}
 
-	public double getAmount() {
+	public BigDecimal getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
 	
-	
-	
-	
-	
-	
-
 }

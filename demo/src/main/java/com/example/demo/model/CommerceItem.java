@@ -1,23 +1,16 @@
 package com.example.demo.model;
 
+import java.math.BigDecimal;
+
 public class CommerceItem {
-	
+
 	String id;
 	String product_id;
 	int quantity;
-	double amount;
-	//BigDecimal amount;
+	BigDecimal amount = new BigDecimal("0.0");
 	
 	
-	//public CommerceItem(String id, String product_id, int quantity, BigDecimal amount) {
-//		super();
-//		this.id = id;
-//		this.product_id = product_id;
-//		this.quantity = quantity;
-//		this.amount = amount;
-//	}
-	
-	public CommerceItem(String id, String product_id, int quantity, double amount) {
+	public CommerceItem(String id, String product_id, int quantity, BigDecimal amount) {
 		super();
 		this.id = id;
 		this.product_id = product_id;
@@ -45,16 +38,11 @@ public class CommerceItem {
 		this.quantity = quantity;
 	}
 
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
 
-	
-	
-	
-
+	public BigDecimal getAmount() {
+		return amount;
+	}
 }

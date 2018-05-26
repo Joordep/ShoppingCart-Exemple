@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">   
+   <head>
+      <meta charset="UTF-8">
+      <title>Produtos</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+	<body>
+	
+	<div>
+		<a th:href="@{/}"> Home </a> <a th:href="@{/products}"> Produtos </a>
+	</div>
+	
+	
+	<div class="product-preview-container" th:each="it: ${sc.array}">
+	 	
+	 	<ul>
+				<li><span th:utext="${it.id}"></span></li>		
+				<li><span th:utext="${it.product_id}"></span></li>				
+				<li><span th:utext="${it.quantity}"></span></li>
+				<li><span th:utext="${it.amount}"></span></li>
+				
+			    	
+		    			    		
+    	   </ul>
+	
+	</div>
+
+
+	</body>
+</html>

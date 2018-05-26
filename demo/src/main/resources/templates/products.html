@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">   
+   <head>
+      <meta charset="UTF-8">
+      <title>Produtos</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+   <body>
+     
+      <div class="page-title">Lista de produtos</div>
+       <a th:href="@{/}">
+   		home
+   	   </a>  
+   	   <br> 	   
+<!--    	    <a th:href="@{/}"> -->
+<!--    		carrinho -->
+<!--    	   </a> -->
+       
+<!-- <form action="#" th:action="@{/processForm}" th:object="${foo}" method="post"> -->
+<!--   <input type="text" th:field="*{bar}" /> -->
+<!--   <input type="submit" /> -->
+<!-- </form> -->
+
+      
+       <div class="product-preview-container" th:each="it: ${lista}">
+	     
+	       <ul>
+	            <li> <img class="product-image" th:src="@{|${it.value.image}|}"> </li>
+	        
+				<li><span th:utext="${it.value.id}"></span></li>		
+				<li><span th:utext="${it.value.name}"></span></li>				
+				<li><span th:utext="${it.value.price}"></span></li>
+				<li>
+			    <form action="#" method="post" th:action="@{/shoppingcart/items}" > <!--  th:object="${it}"  --> 
+			        <input type="hidden" th:value="${it.value.id}" name="product_id"/>
+			        <input type="hidden" th:value="1" name="quantity"/>
+		            <input type="hidden" th:value="${it.value.price}" name="price"/>
+			        <button type="submit">Comprar</button>
+		    	</form>		
+		    	</li>			    		
+    	   </ul>
+<!--     	     th:object="'product_id='${it.value.id}'&quantity=1&price='${it.value.price}" -->
+<!-- 			    		<a th:href="@{|shoppingcart/items?product_id=${it.value.id}&quantity=1&price=${it.value.price}|}"  >Comprar</a> -->    	   
+       </div>
+      
+   </body>
+</html>

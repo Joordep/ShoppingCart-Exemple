@@ -62,12 +62,14 @@ public class ShoppingCartService {
 	}
 
 	public Map<Integer, Product> getproducts() {
+		
 		return shoproducts;
 	}
 	
 	private SecureRandom random = new SecureRandom();
 	public CommerceItem shoppingcartPost(String product_id, Integer quantity, BigDecimal price)
-	{		
+	{	
+		
 		String randomId = new BigInteger(10, random).toString();
 		
 		BigDecimal amountCI = new BigDecimal("0.0");
@@ -79,8 +81,10 @@ public class ShoppingCartService {
 		
 		updateShoppingCart(commerceitems);
 		
+		
 		return ci;	
 	}
+	
 	
 	private BigDecimal calculaValortotal(ArrayList<CommerceItem> commerceitems) {
 		

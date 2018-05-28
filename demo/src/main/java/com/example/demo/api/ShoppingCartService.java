@@ -28,14 +28,13 @@ public class ShoppingCartService {
 	
 	static
 	{		
-		//BigDecimalPrices
+
 		BigDecimal big1 = new BigDecimal("45.10");
 		BigDecimal big2 = new BigDecimal("30.50");
 		BigDecimal big3 = new BigDecimal("15.11");
 		BigDecimal big4 = new BigDecimal("100.10");
 		
 		
-		//shopping products
 		Product p1 = new Product("SKU01", "DVD - AVENGERS",
 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukUCyKaFTv5c6cnWI_a99tqqhCM-zpF2IZEcDmW_6kgT22HBhr62y30Y",
 				big1);
@@ -98,7 +97,6 @@ public class ShoppingCartService {
 
 	public void shoppingcartItemsIdDelete(String id)
 	{
-		//remove item by id
 		
 		Iterator<CommerceItem> it = commerceitems.iterator();
 		while(it.hasNext())
@@ -109,7 +107,6 @@ public class ShoppingCartService {
 		}
 
 		updateShoppingCart(commerceitems);
-
 		
 	}
 

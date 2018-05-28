@@ -78,10 +78,4 @@ public class ShoppingCartAPIController {
 		return "redirect:/shoppingcart";
 	}
 	
-
-//	@DeleteMapping("/shoppingcart/items/{id}")
-//	public void shoppingcartItemIdDelete(@PathVariable("id") String id) {
-//
-//		shoppingCartAPIService.shoppingcartItemsIdDelete(id);
-//	}
 }

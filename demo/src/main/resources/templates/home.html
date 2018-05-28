@@ -5,7 +5,7 @@
       <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
    </head>
 	<body >
-	<!-- don't work on heroku   <th:block th:include="/_header"></th:block> -->
+	<!-- don't work on heroku, don't know why    <th:block th:include="/_header"></th:block> -->
 	
 	<div class="header-container"
       xmlns:th="http://www.thymeleaf.org"
@@ -14,7 +14,7 @@
 	</div> 
 	
 	
-	<div class="page-title"><b>Home<b></div>
+	<div class="page-title">Home</div>
 	<div class="menu">
 	 <a th:href="@{/products}"> Products List </a>  |  <a th:href="@{/shoppingcart}"> MyCart </a>
 	</div>

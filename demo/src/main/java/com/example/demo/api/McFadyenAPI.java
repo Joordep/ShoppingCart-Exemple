@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-
 public class McFadyenAPI {
 
 	public static void main(String[] args) throws Exception {

@@ -1,12 +1,11 @@
-<html xmlns:th="http://www.thymeleaf.org" >
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"> 
    <head>
       <meta charset="UTF-8">
       <title>Home</title>
       <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
    </head>
 	<body >
-
-<!-- 	<th:block th:include="/_header"></th:block>  -->
+	<th:block th:include="/_header"></th:block> 
 	<div class="page-title"><b>Home<b></div>
 	<div class="menu">
 	 <a th:href="@{/products}"> Products List </a>  |  <a th:href="@{/shoppingcart}"> MyCart </a>

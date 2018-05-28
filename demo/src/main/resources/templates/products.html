@@ -5,38 +5,31 @@
       <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
    </head>
    <body>
-     
-      <div class="page-title">Lista de produtos</div>
-       <a th:href="@{/}">
-   		home
-   	   </a>  
-   	   <br> 	   
-<!--    	    <a th:href="@{/}"> -->
-<!--    		carrinho -->
-<!--    	   </a> -->
-       
-<!-- <form action="#" th:action="@{/processForm}" th:object="${foo}" method="post"> -->
-<!--   <input type="text" th:field="*{bar}" /> -->
-<!--   <input type="submit" /> -->
-<!-- </form> -->
-
+     <th:block th:include="/_header"></th:block>
       
+       <div class="page-title"><b>Products List<b></div>
+       
+		<div class="menu">
+		<a th:href="@{/}"> Home</a> | <a th:href="@{/shoppingcart}"> MyCart </a>
+	</div>
+     
        <div class="product-preview-container" th:each="it: ${lista}">
 	     
 	       <ul>
-	            <li> <img class="product-image" th:src="@{|${it.value.image}|}"> </li>
+	            <p> <img class="product-image" th:src="@{|${it.value.image}|}"> </li>
 	        
-				<li><span th:utext="${it.value.id}"></span></li>		
-				<li><span th:utext="${it.value.name}"></span></li>				
-				<li><span th:utext="${it.value.price}"></span></li>
-				<li>
+				<p><span th:utext="${it.value.id}"></span></li>		
+				<p><b><span th:utext="${it.value.name}"></span></b></li>				
+				<p>R$ <span th:utext="${it.value.price}"></span></li>
+				
 			    <form action="#" method="post" th:action="@{/shoppingcart/items}" > <!--  th:object="${it}"  --> 
+				    <p>Units: <input type="number" name="quantity" value="1">
+					<p>
 			        <input type="hidden" th:value="${it.value.id}" name="product_id"/>
-			        <input type="hidden" th:value="1" name="quantity"/>
 		            <input type="hidden" th:value="${it.value.price}" name="price"/>
-			        <button type="submit">Comprar</button>
+			        <button type="submit">Buy now</button>
 		    	</form>		
-		    	</li>			    		
+		    	<p>			    		
     	   </ul>
 <!--     	     th:object="'product_id='${it.value.id}'&quantity=1&price='${it.value.price}" -->
 <!-- 			    		<a th:href="@{|shoppingcart/items?product_id=${it.value.id}&quantity=1&price=${it.value.price}|}"  >Comprar</a> -->    	   

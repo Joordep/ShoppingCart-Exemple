@@ -40,13 +40,13 @@ public class ShoppingCartService {
 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukUCyKaFTv5c6cnWI_a99tqqhCM-zpF2IZEcDmW_6kgT22HBhr62y30Y",
 				big1);
 		Product p2 = new Product("SKU02", "Rocket League",
-				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukUCyKaFTv5c6cnWI_a99tqqhCM-zpF2IZEcDmW_6kgT22HBhr62y30Y",
+				"https://images-na.ssl-images-amazon.com/images/I/81LXUOTmcGL._SX342_.jpg",
 				big2);
 		Product p3 = new Product("SKU03", "Battlefield 4",
 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdZEUJfijo8UMdRPvDptQ67vRomlmkrx10TwgdV-fwpPa-O_XysDHXQNWvQg",
 				big3);
 		Product p4 = new Product("SKU04", "DVD - Amado Batista",
-				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTukUCyKaFTv5c6cnWI_a99tqqhCM-zpF2IZEcDmW_6kgT22HBhr62y30Y",
+				"https://www.kboing.com.br/fotos/imagens/4999664795bca.jpg",
 				big4);
 		
 		shoproducts.put(1, p1);

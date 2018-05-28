@@ -5,9 +5,11 @@
       <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
    </head>
 	<body>
+	<th:block th:include="/_header"></th:block>
 	
-	<div>
-		<a th:href="@{/}"> Home </a> <a th:href="@{/products}"> Produtos </a>
+	 <div class="page-title"><b>My Cart<b></div>
+	<div class="menu">
+		<a th:href="@{/}"> Home </a> | <a th:href="@{/products}"> Products List </a>
 	</div>
 
 
@@ -15,10 +17,10 @@
 
 		<ul>
 
-			<li>Id: <span th:utext="${it.id}"></span></li>
-			<li>Produto: <span th:utext="${it.product_id}"></span></li>
-			<li>Quantidade: <span th:utext="${it.quantity}"></span></li>
-			<li>Preço: <span th:utext="${it.amount}"></span></li>
+			<p>Id: <span th:utext="${it.id}"></span>
+			<p>Produto: <span th:utext="${it.product_id}"></span>
+			<p>Quantidade: <span th:utext="${it.quantity}"></span>
+			<p>Preço: <span th:utext="${it.amount}"></span>
 		    
 		    <form action="#" th:method="delete" th:action="@{'/shoppingcart/items/{id}'(id=${it.id})}" >
 		     	<input type="hidden" name="_method" value="delete"/>

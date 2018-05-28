@@ -4,13 +4,15 @@
       <title>Home</title>
       <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
    </head>
-<body >
-<h1>Hello !</h1>
-<p>Welcome to <span th:text="${appName}">Our App</span></p>
-   
-   <a th:href="@{/products}">
-   Lista de produtos
-   </a>
+	<body >
 
-</body>
+	<th:block th:include="/_header"></th:block>
+	<div class="page-title"><b>Home<b></div>
+	<div class="menu">
+	 <a th:href="@{/products}"> Products List </a>  |  <a th:href="@{/shoppingcart}"> MyCart </a>
+	</div>
+
+
+
+	</body>
 </html>

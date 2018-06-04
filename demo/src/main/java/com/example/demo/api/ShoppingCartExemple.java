@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-public class McFadyenAPI {
+public class ShoppingCartExemple {
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(McFadyenAPI.class, args);
+		SpringApplication.run(ShoppingCartExemple.class, args);
 	}
 }

@@ -1,6 +1,6 @@
 {
   "name": "Spring Boot Heroku Demo",
   "description": "This is a small example of a shoppingcart using Spring Boot application on Heroku.",
-  "repository": "https://github.com/Joordep/ShoppingCart-Exemple/demo",
+  "repository": "https://github.com/Joordep/ShoppingCart-Exemple/tree/master/demo",
   "image": "heroku/java"
 }

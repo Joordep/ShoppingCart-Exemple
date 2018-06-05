@@ -1,4 +1,4 @@
-#ShoppingCart-Exemple
+ShoppingCart-Exemple
 
 Simple shoppingcart exemple using springboot framework and maven. 
 

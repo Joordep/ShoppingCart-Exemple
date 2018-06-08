@@ -1,0 +1,60 @@
+a {
+    color: #0060B6;
+    text-decoration: none;
+    
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+.page-title{
+	background: gray;
+	text-align: center;
+	color: white;
+	height: 30px;
+	font-weight: bold;
+}
+
+.site-name{
+	font-size:200%;
+    margin:10px 10px 10px 0px;
+    padding: 5px;
+}
+
+.header-container {
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    background: blue;
+    color: white;
+}
+.header-container .header-bar  {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.header-container .header-bar  a  {
+    color: white;
+    font-size: bold;
+}
+
+.product-preview-container {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 250px;
+    margin: 5px ;
+    display: inline-block;
+    text-align:left;
+}
+  
+.product-preview-container input {
+    width: 50px;
+}
+
+.product-image {
+    width: 160px;
+    height: 120px;
+}

@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org" > 
+   <head>
+      <meta charset="UTF-8">
+      <title>Home</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+	<body >
+	<!-- don't work on heroku, don't know why    <th:block th:include="/_header"></th:block> -->
+	
+	<div class="header-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+		<div class="site-name">Test ShoppingCart</div>
+	</div> 
+	
+	
+	<div class="page-title">Home</div>
+	<div class="menu">
+	 <a th:href="@{/products}"> Products List </a>  |  <a th:href="@{/shoppingcart}"> MyCart </a>
+	</div>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Produtos</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+   <body>
+   <!--   <th:block th:include="/_header"></th:block> -->
+   	<div class="header-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	<div class="site-name">Test ShoppingCart</div>
+	</div> 
+      
+       <div class="page-title">Products List</div>
+       
+		<div class="menu">
+		<a th:href="@{/}"> Home</a> | <a th:href="@{/shoppingcart}"> MyCart </a>
+	</div>
+     
+       <div class="product-preview-container" th:each="it: ${lista}">
+	     
+	       <ul>
+	            <p> <img class="product-image" th:src="@{|${it.value.image}|}">
+	        
+				<p><span th:utext="${it.value.id}"></span>
+				<p><b><span th:utext="${it.value.name}"></span></b>				
+				<p>R$ <span th:utext="${it.value.price}"></span>
+				
+			    <form action="#" method="post" th:action="@{/shoppingcart/items}" > <!--  th:object="${it}"  --> 
+				    <p>Units: <input type="number" name="quantity" value="1">
+					<p>
+			        <input type="hidden" th:value="${it.value.id}" name="product_id"/>
+		            <input type="hidden" th:value="${it.value.price}" name="price"/>
+			        <button type="submit">Buy now</button>
+		    	</form>		
+		    			    		
+    	   </ul>
+    	   
+       </div>
+      
+   </body>
+</html>

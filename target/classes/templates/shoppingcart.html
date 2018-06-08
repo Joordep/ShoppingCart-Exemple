@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org">  
+   <head>
+      <meta charset="UTF-8">
+      <title>Produtos</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+   </head>
+	<body>
+	<!-- <th:block th:include="/_header"></th:block> -->
+	<div class="header-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+ 
+   <div class="site-name">Test ShoppingCart</div>
+   
+   
+   
+</div> 
+	
+	 <div class="page-title"><b>My Cart<b></div>
+	<div class="menu">
+		<a th:href="@{/}"> Home </a> | <a th:href="@{/products}"> Products List </a>
+	</div>
+
+
+	<div class="product-preview-container" th:each="it: ${sc.array}">
+
+		<ul>
+
+			<p>Id: <span th:utext="${it.id}"></span>
+			<p>Produto: <span th:utext="${it.product_id}"></span>
+			<p>Quantidade: <span th:utext="${it.quantity}"></span>
+			<p>Preço: <span th:utext="${it.amount}"></span>
+		    
+		    <form action="#" th:method="delete" th:action="@{'/shoppingcart/items/{id}'(id=${it.id})}" >
+		     	<input type="hidden" name="_method" value="delete"/>
+		     	<button type="submit">Remover</button>
+		    </form>	
+
+		</ul>
+
+	</div>
+	<br> Total:
+	<span th:utext="${sc.amount}"></span>
+
+
+	</body>
+</html>
